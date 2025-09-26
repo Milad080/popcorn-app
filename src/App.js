@@ -232,7 +232,7 @@ async function translateToPersian(text) {
 
   try {
     const response = await fetch(
-      `http://api.mymemory.translated.net/get?q=${encodeURIComponent(
+      `https://api.mymemory.translated.net/get?q=${encodeURIComponent(
         text
       )}&langpair=en|fa`
     );
@@ -309,7 +309,7 @@ function MovieDetails({
       async function getMovieDetails() {
         setIsloading(true);
         const res = await fetch(
-          `https://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
         );
         const data = await res.json();
         setMovie(data);
@@ -392,7 +392,7 @@ function MovieDetails({
                 </>
               ) : (
                 <p className="rated">
-                  شما قبلا این فیلم را به لیست افزوده اید داده اید
+                  شما قبلا این فیلم را به لیست افزوده اید
                   <span>( با امتیاز {watchedUserRating}⭐)</span>
                 </p>
               )}

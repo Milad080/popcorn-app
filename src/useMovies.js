@@ -25,7 +25,6 @@ export function useMovies(query) {
             );
 
           const data = await res.json();
-          console.log(KEY);
           if (data.Response === "False")
             throw new Error("فیلم مورد نظر یافت نشد");
           setMovies(data.Search);
