@@ -84,10 +84,10 @@ function Navbar({ children }) {
 }
 function NavLogo() {
   return (
-    <h1 className="nav-logo">
+    <div className="nav-logo">
+      <h3>popcorn app</h3>
       <span role="img">🍿</span>
-      popcorn app
-    </h1>
+    </div>
   );
 }
 function NavSearch({ query, setQuery }) {
@@ -159,19 +159,19 @@ function WatchedMoviesSummary({ watchedMovies }) {
       <div>
         <p>
           <span>{watchedMovies.length} فیلم </span>
-          <span>#️⃣</span>
+          <span className="summary-icon">#️⃣</span>
         </p>
         <p>
           <span>{Number(avgImdbRating.toFixed(2))}</span>
-          <span>⭐️</span>
+          <span className="summary-icon">⭐️</span>
         </p>
         <p>
           <span>{Number(avgUserRating.toFixed(2))}</span>
-          <span>🌟</span>
+          <span className="summary-icon">🌟</span>
         </p>
         <p>
           <span>{Number(avgRuntime.toFixed(2))} دقیقه </span>
-          <span>⏳</span>
+          <span className="summary-icon">⏳</span>
         </p>
       </div>
     </div>
