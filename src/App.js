@@ -57,7 +57,11 @@ function App() {
         <Box>
           {isLoading && <Loader />}
           {!isLoading && error && <ErrorMessage message={error} />}
-          <MoviesList movies={movies} onSelectedMovie={handleSelectedMovie} />
+          <MoviesList
+            movies={movies}
+            onSelectedMovie={handleSelectedMovie}
+            selectedId={selectedId}
+          />
         </Box>
       </Main>
     </>
@@ -122,22 +126,26 @@ function Box({ children }) {
     </div>
   );
 }
-function MoviesList({ movies, onSelectedMovie }) {
+function MoviesList({ movies, onSelectedMovie, selectedId }) {
   return (
     <ul className="list">
       {movies?.map((movie) => (
         <Movie
           movie={movie}
           onSelectedMovie={onSelectedMovie}
+          selectedId={selectedId}
           key={movie.imdbID}
         />
       ))}
     </ul>
   );
 }
-function Movie({ movie, onSelectedMovie }) {
+function Movie({ movie, onSelectedMovie, selectedId }) {
   return (
-    <li onClick={() => onSelectedMovie(movie.imdbID)}>
+    <li
+      className={movie.imdbID === selectedId && "active"}
+      onClick={() => onSelectedMovie(movie.imdbID)}
+    >
       <img src={movie.Poster} alt={`${movie.Title} poster`} />
       <div className="title">
         <h1>{movie.Title}</h1>
@@ -204,15 +212,15 @@ function WatchedMovie({ watched, onDeleteWatched }) {
         <div>
           <h3>{watched.title}</h3>
           <p>
-            <span>⭐️</span>
+            <span className="watched-icon">⭐️</span>
             <span>{watched.imdbRating}</span>
           </p>
           <p>
-            <span>🌟</span>
+            <span className="watched-icon">🌟</span>
             <span>{watched.userRating}</span>
           </p>
           <p>
-            <span>⏳</span>
+            <span className="watched-icon">⏳</span>
             <span> {watched.runtime} دقیقه </span>
           </p>
         </div>
