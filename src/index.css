@@ -55,7 +55,7 @@ body {
 }
 .nav-bar {
   background: linear-gradient(135deg, var(--color-primary), var(--color-blue));
-  margin: 1.5rem;
+  margin: 1rem;
   display: grid;
   color: #dee2e6;
   grid-template-columns: 1fr auto 1fr;
@@ -139,6 +139,7 @@ body {
   border: none;
   transition: all 0.3s;
   border-radius: 7px;
+  direction: rtl;
 }
 @media (min-width: 500px) {
   .nav-search {
@@ -184,31 +185,37 @@ body {
   font-weight: 700;
   transform: translateY(-0.25px);
   transition: all 0.3s ease;
+  direction: ltr;
 }
 
 .nav-search::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
+  direction: rtl;
 }
 
 .nav-search::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
+  direction: rtl;
 }
 
 .nav-search:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
+  direction: rtl;
 }
 
 .nav-search::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
+  direction: rtl;
 }
 
 .nav-search::placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-family: "Markazi Text", serif;
+  direction: rtl;
 }
 
 .main {
-  margin: 0 3rem;
+  margin: 0 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -416,23 +423,24 @@ body {
   align-items: center;
   font-family: "Markazi Text", serif;
   background-color: var(--color-background-100);
-  box-shadow: 0 1.2rem 1.2rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 0 0;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
   direction: rtl;
 }
 
 .summary h2 {
   margin-top: 5px;
   font-family: "Alexandria", sans-serif;
-  font-size: 5.6px;
-  line-height: 2;
+  font-size: 5.5px;
+  line-height: 1.7;
   margin-bottom: 1rem;
   font-weight: 400;
+  min-width: 120px;
 }
 @media (min-width: 500px) {
   .summary h2 {
-    font-size: 0.7rem;
+    font-size: 7px;
     font-weight: 800;
   }
 }
@@ -458,8 +466,8 @@ body {
   display: flex;
   font-family: "Alexandria", sans-serif;
   flex-direction: row;
-  font-size: 0.5rem;
-  font-weight: 300;
+  font-size: 4px;
+  font-weight: 500;
   line-height: 1;
   gap: 7px;
   direction: rtl;
