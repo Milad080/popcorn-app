@@ -1210,6 +1210,11 @@ body {
   font-size: 1rem;
   flex: 1;
 }
+@media (min-width: 1070px) {
+  .platform-name {
+    font-size: 1.4rem;
+  }
+}
 
 .platform-link:hover {
   transform: translateY(-3px);
