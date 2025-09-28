@@ -78,6 +78,7 @@ body {
 @media (min-width: 1070px) {
   .nav-bar {
     height: 8.5rem;
+    margin-bottom: 1.3rem;
   }
 }
 .nav-result {
@@ -311,7 +312,7 @@ body {
     height: 163rem;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1070px) {
   .box {
     height: 177rem;
   }
@@ -490,8 +491,9 @@ body {
 
 .summary h2 {
   margin-top: 5px;
+  text-align: center;
   font-family: "Alexandria", sans-serif;
-  font-size: 5.5px;
+  font-size: 10px;
   line-height: 1.7;
   margin-bottom: 1rem;
   font-weight: 400;
@@ -499,8 +501,9 @@ body {
 }
 @media (min-width: 500px) {
   .summary h2 {
-    font-size: 7px;
+    font-size: 8px;
     font-weight: 800;
+    text-align: right;
   }
 }
 @media (min-width: 650px) {
@@ -530,8 +533,9 @@ body {
   display: flex;
   font-family: "Alexandria", sans-serif;
   flex-direction: row;
-  font-size: 4px;
-  font-weight: 500;
+  align-items: center;
+  font-size: 7px;
+  font-weight: 400;
   line-height: 1;
   gap: 7px;
   direction: rtl;
@@ -541,8 +545,8 @@ body {
 }
 @media (min-width: 500px) {
   .summary div {
-    font-size: 0.66rem;
-    margin-left: 4rem;
+    font-size: 8px;
+    margin-left: 6rem;
   }
 }
 @media (min-width: 650px) {
