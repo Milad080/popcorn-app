@@ -439,7 +439,8 @@ function MovieDetails({
               </p>
               <p className="detail">
                 <span>کارگردان :</span>
-                <br /> {director}
+                <br />
+                {director === "N/A" ? "-----" : director}
               </p>
             </div>
           </section>
